@@ -1,4 +1,4 @@
 PDF-Tools
 =========
 
-Scripts for working with PDF
+Scripts for working with PDF files
