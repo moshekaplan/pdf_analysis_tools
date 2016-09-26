@@ -1,16 +1,17 @@
-pdf_tools
-=========
+# pdf_tools
 
-Scripts for working with PDF files
+Tools for working with PDF files
 
-# pdf_js
+## Tools
+
+### pdf_js
 Extracts JavaScript code from a PDF file
 
-# pdf_links
+### pdf_links
 Extracts all links from a PDF file
 
-# pdf_openaction
+### pdf_openaction
 Extracts OpenActions from a PDF file
 
-# split_pdf
+### split_pdf
 Splits a PDF file into one page per file, in a similar fashion to the extract function in Adobe Acrobat
