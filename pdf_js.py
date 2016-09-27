@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 
 """
-This script extracts all URLs from a supplied PDF file.
+This script extracts all JavaScript from a supplied PDF file.
 
-The script finds all URLs by walking the PDF tree and looking for all URI
-references, as specified in Section 8.5 of PDF v1.7:
-
-<</Type/Action/S/URI/URI/<dest>
-
-For Example:
-<</Type/Action/S/URI/URI(http://www.google.com/) >>
+The script finds all JavaScript by walking the PDF tree and looking for all text
+referenced with a JS entry, as specified in Section 8.5 of PDF v1.7.
 """
 import sys
 import StringIO
