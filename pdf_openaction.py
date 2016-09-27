@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # encoding:UTF-8
 """
-This script extracts all URLs from a supplied PDF file.
+This script extracts all OpenAction and AAs (Additional Actions) from a supplied PDF file.
 
-The script finds all URLs by walking the PDF tree and looking for all URI
-references, as specified in Section 8.5 of PDF v1.7:
-
-<</Type/Action/S/URI/URI/<dest>
-
-For Example:
-<</Type/Action/S/URI/URI(http://www.google.com/) >>
+The script finds all OpenActions and AAs by walking the PDF tree and looking for all 
+OpenActions and AAs, as specified in Section 3.6.1 and 3.6.2 of PDF v1.7.
 """
 import sys
 import StringIO
