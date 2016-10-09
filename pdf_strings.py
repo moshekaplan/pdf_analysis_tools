@@ -2,6 +2,13 @@
 
 """
 This script extracts all strings from a supplied PDF file.
+
+Running strings against PDF files is not always helpful, because interesting values
+like URLs and JavaScript can be encoded so they are not human-readable.
+
+This script works around that by first decoding all text inside of the PDF file
+so that the strings are human-readable. This also has the benefit of not including
+strings that are not displayed to the user.
 """
 
 import sys
