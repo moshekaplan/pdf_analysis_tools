@@ -20,7 +20,7 @@ def run_all(fpath):
     print  "*"*20 + "PDF JavaScript" + "*"*20
     pdf_js.extract_js(fpath)
     print  "*"*20 + "PDF Strings" + "*"*20
-    pdf_strings.get_strings(fpath)
+    print pdf_strings.get_strings(fpath)
 
 
 def main():
