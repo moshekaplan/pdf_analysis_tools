@@ -69,6 +69,14 @@ def extract_urls(fpath):
         src_pdf_blob = fh.read()
     pdf_data = PyPDF2.PdfFileReader(StringIO.StringIO(src_pdf_blob))
     urls = find_URIs(pdf_data)
+    
+    # Also extract URLs included in the text:
+    texts = []
+    for page_num, page in enumerate(pdf_data.pages):
+        texts.append(page.extractText())
+        extracted_text = " ".join(texts)
+    urls.extend( re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', extracted_text) ) 
+    
     if urls:
         print "\n".join(urls)
 
