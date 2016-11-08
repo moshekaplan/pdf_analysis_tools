@@ -27,8 +27,17 @@ def main():
     if len(sys.argv) < 2:
         print "USAGE: %s %s <filename>" % (sys.executable, sys.argv[0])
         sys.exit(1)
-    fpath = sys.argv[1]
-    run_all(fpath)
+        
+    for arg in sys.argv[1:]:
+        fpath = arg
+        if os.path.isfile(fpath):
+            run_all(fpath)
+        else:
+            for root, dirs, files in os.walk(fpath):
+                for f in files:
+                    fpath = os.path.join(root, f)
+                    print "File:", fpath
+                    run_all(fpath)
 
 if __name__ == "__main__":
     main()
