@@ -4,6 +4,7 @@
 This script runs a file through all of the PDF tools
 """
 
+import os
 import sys
 
 import pdf_js
