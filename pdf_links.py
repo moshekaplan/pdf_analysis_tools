@@ -11,6 +11,8 @@ references, as specified in Section 8.5 of PDF v1.7:
 For Example:
 <</Type/Action/S/URI/URI(http://www.google.com/) >>
 """
+
+import re
 import sys
 import StringIO
 import warnings
